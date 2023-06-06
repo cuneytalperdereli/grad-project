@@ -1,5 +1,7 @@
 import React, { useEffect } from "react";
 import AppRouter from "./router/AppRouter";
+import AuthContextProvider from "./context/AuthContextProvider";
+import { ToastContainer } from "react-toastify";
 
 const App = () => {
 
@@ -8,7 +10,10 @@ const App = () => {
   return (
     <div className="bg-grey-100 dark:bg-[#090f0b]">
      
+     <AuthContextProvider>
       <AppRouter/>
+      <ToastContainer/>
+      </AuthContextProvider>
       
      
     </div>
