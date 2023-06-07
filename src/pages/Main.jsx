@@ -1,4 +1,5 @@
 import React from 'react'
+import { Navigate } from 'react-router';
 // Initialization for ES Users
 import {
   Carousel,
@@ -9,8 +10,8 @@ initTE({ Carousel });
 
 const Main = () => {
   return (
-    <div>
-      <div
+    <div >
+<div
   id="carouselExampleCaptions"
   className="relative"
   data-te-carousel-init=""
@@ -59,11 +60,23 @@ const Main = () => {
         className="block w-full"
         alt="..."
       />
+
       <div className="absolute inset-x-[15%] bottom-5 hidden py-5 text-center text-white md:block">
-        <h5 className="text-xl">What2-Do brings together all your missions, teammates and tools
-  </h5>
+        <h5 className="text-xl">What 2-Do brings together all your missions, teammates and tools
+</h5>
         <p>Even if the people on your team work in different places, you keep everything in one place.
 </p>
+<button
+
+  type="button "
+  
+  className=" mt-5 mb-5 inline-block rounded bg-primary px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]" onClick={()=> {
+    !currentUser && alert("Please log in ")
+  Navigate("/dragdrop")}}
+>
+  Get Started
+</button>
+
       </div>
     </div>
     {/*Second item*/}
@@ -78,8 +91,10 @@ const Main = () => {
         alt="..."
       />
       <div className="absolute inset-x-[15%] bottom-5 hidden py-5 text-center text-white md:block">
-        <h5 className="text-xl">Second slide label</h5>
-        <p>Some representative placeholder content for the second slide.</p>
+        <h5 className="text-xl">A new look at the working process
+</h5>
+        <p>View your team's project from every angle and bring a fresh perspective to the task at hand.
+</p>
       </div>
     </div>
     {/*Third item*/}
@@ -94,8 +109,10 @@ const Main = () => {
         alt="..."
       />
       <div className="absolute inset-x-[15%] bottom-5 hidden py-5 text-center text-white md:block">
-        <h5 className="text-xl">Third slide label</h5>
-        <p>Some representative placeholder content for the third slide.</p>
+        <h5 className="text-xl">Do more with What 2-Do
+</h5>
+        <p>What 2-Do's intuitive features allow teams to quickly create and customize a workflow for any job.
+</p>
       </div>
     </div>
   </div>

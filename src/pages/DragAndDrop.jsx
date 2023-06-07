@@ -147,6 +147,7 @@ const DragAndDrop = () => {
     });
 
     return (
+      
       <div
         className={cardClassName}
         key={task.id}
@@ -170,16 +171,31 @@ const DragAndDrop = () => {
                 <FaTrash onClick={handleDelete} className="text-gray-600 cursor-pointer" />
               </div>
             </div>
+            <div className="flex items-center mt-2">
+              <div className="mr-2">
+                <span className="text-sm font-medium text-gray-700">Mission:</span>
+                <span className="text-sm text-gray-600 ml-1">{task.mission}</span>
+              </div>
+              {task.deadline && (
+                <div>
+                  <span className="text-sm font-medium text-gray-700">Deadline:</span>
+                  <span className="text-sm text-gray-600 ml-1">{task.deadline.toLocaleDateString()}</span>
+                </div>
+              )}
+            </div>
           </div>
         )}
       </div>
+      
     );
   };
 
   return (
-    <div className="drag-and-drop-container">
+
+    
+    <div className="container">
       <div className="card p-4 bg-red-100" onDragOver={handleDragOver} onDrop={event => handleDrop(event, 'todo')}>
-        <h2 className="text-xl font-medium text-red-800 mb-4">To-Do</h2>
+        <h2 className="text-xl font-medium text-red-800 mb-4">To Do</h2>
         {tasks.map(task => {
           if (task.status === 'todo') {
             return <Task key={task.id} task={task} />;
@@ -209,6 +225,7 @@ const DragAndDrop = () => {
         })}
       </div>
     </div>
+    
   );
 };
 

@@ -1,8 +1,22 @@
-.drag-and-drop-container {
+body{
+background-image: url("../assets/WhatsApp\ Image\ 2023-06-07\ at\ 21.19.03.jpeg");
+
+opacity: 1;
+height: 100%
+
+
+;}  
+
+
+.container {
+  opacity: 0.9;
+ background: transparent;
   display: flex;
+  gap: 16px;
 }
 
 .card {
+ 
   flex: 1;
   background-color: #f0f0f0;
   padding: 10px;
@@ -11,6 +25,7 @@
 }
 
 .task {
+  opacity: 2;
   background-color: #ffffff;
   padding: 10px;
   margin-bottom: 10px;
