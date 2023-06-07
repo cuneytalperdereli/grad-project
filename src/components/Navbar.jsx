@@ -4,6 +4,14 @@ import avatar from "../assets/avatar.png";
 import { logOut } from "../auth/firebase";
 import { AuthContext } from "../context/AuthContextProvider";
 import Switch from "./Switch";
+// Initialization for ES Users
+import {
+  Dropdown,
+  Collapse,
+  initTE,
+} from "tw-elements";
+
+initTE({ Dropdown, Collapse });
 
 const Navbar = () => {
   const { currentUser } = useContext(AuthContext);
