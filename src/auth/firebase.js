@@ -71,6 +71,7 @@ export const signUpWithGoogle = (navigate) =>{
   .then((result) => {
     console.log(result);
   navigate("/")
+  toastSuccessNotify("Logged in Successfully")
   }).catch((error) => {
     console.log(error);
   });

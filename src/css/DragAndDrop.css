@@ -1,23 +1,20 @@
-body{
-background-image: url("../assets/WhatsApp\ Image\ 2023-06-07\ at\ 21.19.03.jpeg");
+
+.container123{
+  background-image: url("../assets/pexels-eberhard-grossgasteiger-1287145.jpg");
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
 
 opacity: 1;
-
-
-
-;}  
-
-
-.container {
-  
-  opacity: 0.9;
- background: transparent;
   display: flex;
+  height: 100vh;
+  opacity: 0.9;
   gap: 16px;
 }
 
 .card {
- 
+  height: 100%; 
+  overflow-y: auto;
   flex: 1;
   background-color: #f0f0f0;
   padding: 10px;

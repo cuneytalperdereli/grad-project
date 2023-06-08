@@ -42,10 +42,16 @@ const Navbar = () => {
           Register
         </Link>
       </li>
+      <li className="my-4 lg:my-0 lg:pr-2"  >
+        <a className="disabled:text-black/30 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400" href="#contact">
+
+          Contact
+        </a>
+      </li>
       {/* Team link */}
       <li className="mb-4 lg:mb-0 lg:pr-2" data-te-nav-item-ref="">
         <Link
-          className="p-0 text-white opacity-60 hover:opacity-80 focus:opacity-80 disabled:text-black/30 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
+          className="p-0  opacity-60 hover:opacity-80 focus:opacity-80 disabled:text-black/30 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
           to="/login"
           data-te-nav-link-ref=""
          
@@ -57,7 +63,7 @@ const Navbar = () => {
       {/* Projects link */}
       <li className="mb-4 lg:mb-0 lg:pr-2" data-te-nav-item-ref="">
         <span
-          className="p-0 text-white opacity-60 hover:opacity-80 focus:opacity-80 disabled:text-black/30 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
+          className="p-0  opacity-60 hover:opacity-80 focus:opacity-80 disabled:text-black/30 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
           role="button"
           onClick={()=>logOut()}
           data-te-nav-link-ref=""

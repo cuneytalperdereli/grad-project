@@ -19,6 +19,7 @@ const AppRouter = () => {
     <Route path="/dragdrop" element= { <PrivateRouter/> }>
     <Route path="" element={<DragAndDrop/>}/>
     
+    
     </Route>
   </Routes>
   <Footer/>
