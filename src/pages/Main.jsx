@@ -1,14 +1,23 @@
-import React from 'react'
-import { Navigate } from 'react-router';
+import React, { useContext } from 'react'
+import {  useNavigate } from 'react-router';
+import Single from '../assets/single.png'
+import Double from '../assets/double.png'
+import Triple from '../assets/triple.png'
+import { AuthContext } from '../context/AuthContextProvider';
+
 // Initialization for ES Users
 import {
   Carousel,
   initTE,
 } from "tw-elements";
 
+
 initTE({ Carousel });
 
 const Main = () => {
+
+  const {currentUser} = useContext(AuthContext)
+  const navigate = useNavigate()
   return (
     <div >
 <div
@@ -72,7 +81,7 @@ const Main = () => {
   
   className=" mt-5 mb-5 inline-block rounded bg-primary px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]" onClick={()=> {
     !currentUser && alert("Please log in ")
-  Navigate("/dragdrop")}}
+  navigate("/dragdrop")}}
 >
   Get Started
 </button>
@@ -171,6 +180,82 @@ const Main = () => {
     </span>
   </button>
 </div>
+
+
+    <div className='w-full py-[10rem] px-4 bg-white'>
+      <div className='max-w-[1240px] mx-auto grid lg:grid-cols-3'>
+        <div className='lg:col-span-2 my-4'>
+          <h1 className='md:text-4xl sm:text-3xl text-2xl font-bold py-2'>
+            Want tips & tricks to optimize your tasks?
+          </h1>
+          <p>Sign up to our site and stay up to date.</p>
+        </div>
+        <div className='my-4'>
+          <div className='flex flex-col sm:flex-row items-center justify-between w-full'>
+            <input
+              className='p-3 flex w-full rounded-md text-black'
+              type='email'
+              placeholder='Enter Email'
+            />
+            <button className='bg-[#00df9a] text-black rounded-md font-medium w-[200px] ml-4 my-6 px-6 py-3'>
+              Notify Me
+            </button>
+          </div>
+          <p>
+            We care bout the protection of your data. Read our{' '}
+            <span className='text-[#00df9a]'>Privacy Policy.</span>
+          </p>
+        </div>
+      </div>
+    </div>
+ 
+
+
+<div className='w-full py-[10rem] px-4 bg-white'>
+      <div className='max-w-[1240px] mx-auto grid md:grid-cols-3 gap-8'>
+          <div className='w-full shadow-xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300'>
+              <img className='w-20 mx-auto mt-[-3rem] bg-white' src={Single} alt="/" />
+              <h2 className='text-2xl font-bold text-center py-8'>Single User</h2>
+              <p className='text-center text-4xl font-bold'>$149</p>
+              <div className='text-center font-medium'>
+                  <p className='py-2 border-b mx-8 mt-8'>500 GB Storage</p>
+                  <p className='py-2 border-b mx-8'>1 Granted User</p>
+                  <p className='py-2 border-b mx-8'>Send up to 2 GB</p>
+              </div>
+              <button className='bg-[#00df9a] w-[200px] rounded-md font-medium my-6 mx-auto px-6 py-3'>Start Trial</button>
+          </div>
+          <div className='w-full shadow-xl bg-gray-100 flex flex-col p-4 md:my-0 my-8 rounded-lg hover:scale-105 duration-300'>
+              <img className='w-20 mx-auto mt-[-3rem] bg-transparent' src={Double} alt="/" />
+              <h2 className='text-2xl font-bold text-center py-8'>LMTD Companies</h2>
+              <p className='text-center text-4xl font-bold'>$189</p>
+              <div className='text-center font-medium'>
+                  <p className='py-2 border-b mx-8 mt-8'>1 TB Storage</p>
+                  <p className='py-2 border-b mx-8'>2-5 Granted User</p>
+                  <p className='py-2 border-b mx-8'>Send up to 4 GB</p>
+              </div>
+              <button className='bg-black text-[#00df9a] w-[200px] rounded-md font-medium my-6 mx-auto px-6 py-3'>Start Trial</button>
+          </div>
+          <div className='w-full shadow-xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300'>
+              <img className='w-20 mx-auto mt-[-3rem] bg-white' src={Triple} alt="/" />
+              <h2 className='text-2xl font-bold text-center py-8'>Big Companies</h2>
+              <p className='text-center text-4xl font-bold'>$450</p>
+              <div className='text-center font-medium'>
+                  <p className='py-2 border-b mx-8 mt-8'>Unlimited Storage</p>
+                  <p className='py-2 border-b mx-8'>Unlimited User</p>
+                  <p className='py-2 border-b mx-8'>Send up to 999999 GB</p>
+              </div>
+              <button className='bg-[#00df9a] w-[200px] rounded-md font-medium my-6 mx-auto px-6 py-3'>Start Trial</button>
+          </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
 
 
 
