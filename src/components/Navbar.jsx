@@ -33,6 +33,19 @@ const Navbar = () => {
       data-te-navbar-nav-ref=""
     >
       {/* Dashboard link */}
+      
+      <li className="my-4 lg:my-0 lg:pr-2"  >
+        <a className="disabled:text-black/30 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400" href="#contact">
+
+          Contact
+        </a>
+      </li>
+      <li className="my-4 lg:my-0 lg:pr-2"  >
+        <a className="disabled:text-black/30 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400" href="#bill">
+
+          Billing
+        </a>
+      </li>
       <li className="my-4 lg:my-0 lg:pr-2" data-te-nav-item-ref="">
         <Link
           className=" disabled:text-black/30 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
@@ -41,12 +54,6 @@ const Navbar = () => {
         >
           Register
         </Link>
-      </li>
-      <li className="my-4 lg:my-0 lg:pr-2"  >
-        <a className="disabled:text-black/30 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400" href="#contact">
-
-          Contact
-        </a>
       </li>
       {/* Team link */}
       <li className="mb-4 lg:mb-0 lg:pr-2" data-te-nav-item-ref="">

@@ -67,8 +67,8 @@ const Main = () => {
       style={{ backfaceVisibility: "hidden" }}
     >
       <img
-        src="https://images.pexels.com/photos/3861958/pexels-photo-3861958.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-        className="block w-full h-[87.5vh]"
+        src="https://e0.pxfuel.com/wallpapers/450/480/desktop-wallpaper-software-engineer-product-software-engineering-text-personal-computer-laptop-technology-computer-keyboard-electronic-device-font-hand.jpg"
+        className="block w-full h-[42rem]"
         alt="..."
       />
 
@@ -97,8 +97,8 @@ const Main = () => {
       style={{ backfaceVisibility: "hidden" }}
     >
       <img
-        src="https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-        className="block w-full h-[87.5vh] "
+        src="https://tecdn.b-cdn.net/img/Photos/Slides/img%20(22).jpg"
+        className="block w-full"
         alt="..."
       />
       <div className="absolute inset-x-[15%] bottom-5 hidden py-5 text-center text-white md:block">
@@ -115,7 +115,7 @@ const Main = () => {
       style={{ backfaceVisibility: "hidden" }}
     >
       <img
-        src="https://images.pexels.com/photos/936137/pexels-photo-936137.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+        src="https://tecdn.b-cdn.net/img/Photos/Slides/img%20(23).jpg"
         className="block w-full"
         alt="..."
       />
@@ -216,7 +216,7 @@ const Main = () => {
  
 
 
-<div className='w-full py-[10rem] px-4 bg-white'>
+<div id='bill' className='w-full py-[10rem] px-4 bg-white'>
       <div className='max-w-[1240px] mx-auto grid md:grid-cols-3 gap-8'>
           <div className='w-full shadow-xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300'>
               <img className='w-20 mx-auto mt-[-3rem] bg-white' src={Single} alt="/" />
@@ -477,6 +477,9 @@ const Main = () => {
 </>
 
 
+<a class="up-btn" href="#body">
+      <i  class="">   UP   </i>
+    </a>
 
 
 
